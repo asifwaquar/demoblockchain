@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: asifwaquardemoblockchain 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: asifwaquardemoblockchain
+  template:
+    metadata:
+      labels:
+        app: asifwaquardemoblockchain 
+    spec:
+      containers:
+        - name: asifwaquardemoblockchain 
+          image: acsblockchain.azurecr.io/asifwaquardemoblockchain
+          ports:
+          - containerPort: 3001
